@@ -25,7 +25,7 @@ for tx in $TXIDS; do
     MATCH=$(echo "$TX_JSON" | jq --arg coinbase "$COINBASE_TXID" '[.vin[] | select(.txid == $coinbase)] | length')
     
     if [ "$MATCH" -gt 0 ]; then
-        echo "A transação que gasta a saída coinbase do bloco 256128 é: $tx"
+        echo "$tx"
         exit 0
     fi
 done

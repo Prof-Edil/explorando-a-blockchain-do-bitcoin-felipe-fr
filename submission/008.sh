@@ -17,4 +17,4 @@ else
     PUBKEY=$(echo "$INPUT0_ASM" | awk '{print $2}')
 fi
 
-echo "The public key that signed input 0 is: $PUBKEY"
+echo "$PUBKEY"
